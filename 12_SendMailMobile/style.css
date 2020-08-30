@@ -1,0 +1,17 @@
+@-webkit-keyframes pulse {
+  0% {
+    background-color: #CCC;
+  }
+  25% {
+    background-color: #EEE;
+  }
+  50% {
+    background-color: #CCC;
+  }
+  75% {
+    background-color: #EEE;
+  }
+  100% {
+    background-color: #CCC;
+  }
+}

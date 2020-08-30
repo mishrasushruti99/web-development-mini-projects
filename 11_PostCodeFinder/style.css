@@ -1,0 +1,24 @@
+html {
+  box-sizing: border-box;
+  min-height:100vh;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: linear-gradient(#93cede, #75bdd1, #49a5bf);
+  font-family: 'Open Sans';
+}
+
+.container{
+  margin-top: 50px;
+  padding-top: 150px;
+  text-align: center;
+  background: linear-gradient(#fff, #49a5bf);
+  height: 500px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  box-shadow: 2px 0px 5px rgba(3,3,3, .4), -2px 0px 5px rgba(3,3,3, .4);
+}

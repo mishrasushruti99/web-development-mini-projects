@@ -1,0 +1,43 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+nav{
+  padding: 8px 0;
+}
+.jumbotron {
+    background-image: url("https://www.yatzer.com/sites/default/files/article_images/3177/Marina-Vernicos-sea-through-2013-yatzer-2.jpg");
+    text-align: center;
+    margin-top: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#email {
+    width: 300px;
+}
+#appSummary {
+  text-align: center;
+  margin-top:50px;
+  margin-bottom: 50px;
+}
+.card-img-top {
+    width: 100%;
+}
+
+#appStoreIcon {
+    width: 200px;
+}
+
+#footer {
+    background-color: rgba(182, 241, 241, 0.68);
+    padding-top: 150px;
+    margin-top: 50px;
+    text-align: center;
+    padding-bottom: 150px;
+}

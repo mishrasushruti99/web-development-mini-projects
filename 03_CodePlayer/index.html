@@ -1,0 +1,32 @@
+<! DOCTYPE html>
+<html>
+<head>
+  <title>CodePlayer</title>
+  <link href="style.css" rel="stylesheet" />
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header">
+    <div id="logo">
+        <img src="https://static.jsbin.com/images/dave.min.svg" />
+        <p>CodePlayer<br/><small>JSbin Clone!</small></p>    
+    </div>
+    <div id="buttonContainer">
+      <div class="toggleButton active" id="html">HTML</div>
+      <div class="toggleButton" id="css">CSS</div>
+      <div class="toggleButton" id="javascript">JavaScript</div>
+      <div class="toggleButton active" id="output">Output</div>
+    </div>
+  </div>
+  <div id="main-container">
+    <textarea id="htmlPanel" class="panel active"><p id="paragraph">Hello World!</p></textarea>
+    <textarea id="cssPanel" class="panel hidden">p { color: green; }</textarea>
+    <textarea id="javascriptPanel" class="panel hidden">document.getElementById("paragraph").innerHTML = "Hello Rob!";</textarea>
+    <iframe id="outputPanel" class="panel"></iframe>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

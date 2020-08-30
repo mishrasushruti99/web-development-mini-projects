@@ -1,0 +1,117 @@
+<html>
+
+<head>
+  <title>Email Extractor</title>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Raleway:300&display=swap" rel="stylesheet">
+  <style>
+
+    .wrapper {
+      min-height: 100%;
+      height: auto;
+      box-sizing: border-box;
+      padding-bottom: 64px;
+      padding-top: 50px;
+      position: relative;
+    }
+
+    .title {
+      font-size: 30px;
+      line-height: 1.2;
+      font-weight: 700;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    .hr {
+      clear: both;
+      display: block;
+      height: 0;
+      border-top: 1px solid rgba(6, 8, 8, 0.12);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      margin-bottom: 20px;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .content {
+      width: 90%;
+      max-width: 1008px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    p {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 16px;
+    }
+
+    textarea {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 16px;
+      margin: 15px 0px;
+      padding: 15px;
+      width: 100%;
+      max-width: 720px;
+      min-height: 75px;
+    }
+
+    button {
+      margin-bottom: 10px;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 16px;
+      padding: 10px;
+    }
+
+    .counter {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="content center">
+      <h1 class="title">Email Extractor</h1>
+      <div class="hr"></div>
+      <p>
+        Copy and paste your string of text in the below box to extract
+        all emails from that text.
+      </p>
+      <textarea name="txtarea" rows="12" cols="50">
+      </textarea>
+      <br>
+      <button type="button">Extract</button>
+      <br> <span class="counter"> </span>
+      <br>
+      <textarea name="output" rows="12" cols="50"></textarea>
+    </div>
+  </div>
+  <script>
+    const rawTxt = document.querySelector("textarea[name=txtarea]");
+    const finTxt = document.querySelector("textarea[name=output]");
+    const btn = document.querySelector("button");
+    const counter = document.querySelector(".counter");
+    btn.addEventListener("click", function() {
+      let temp = rawTxt.value;
+      let exp = /([A-Za-z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z._-]+)/gi;
+      let emailData = temp.match(exp);
+      let holder = [];
+      for (let x = 0; x < emailData.length; x++) {
+        if (holder.indexOf(emailData[x]) == -1) {
+          holder.push(emailData[x]);
+        }
+      }
+      let tempHolder = holder.join('; ');
+      counter.innerText = "Emails Found " + holder.length;
+      finTxt.innerText = tempHolder;
+    })
+    finTxt.addEventListener("click", function() {
+      this.select();
+    })
+  </script>
+</body>
+
+</html>

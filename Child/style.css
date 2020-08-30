@@ -1,0 +1,13 @@
+/*
+Theme Name:   Twenty Fifteen Child
+Theme URI:   http: //SingleP
+Description:  Child theme for the Twenty Fifteen design
+Author:     MAshraf
+Author URI:   
+Template:    twentyfifteen
+Version:    0.1
+*/
+
+@import url("../twentyfifteen/style.css");
+@import url("css/bootstrap.css");
+@import url("css/font-awesome");

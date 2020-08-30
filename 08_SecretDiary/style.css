@@ -1,0 +1,36 @@
+html{
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+body{
+  background: none;
+  color: #fff;
+}
+
+.container{
+  text-align:center;
+  width: 400px;
+}
+
+#homePageContainer{
+  margin: 150px auto;
+}
+
+#logInForm{
+  display:none;
+}
+
+.toggleForms{
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+a.toggleForms {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#diary{
+  width: 100%;
+  height: 100%;
+}
